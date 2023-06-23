@@ -12,7 +12,6 @@ spec: #Dictoionary
     name: myapp2-pod 
     labels:
       app: myapp2  
-    namespace: default
   spec:
     containers:
       - name: myapp2-container
