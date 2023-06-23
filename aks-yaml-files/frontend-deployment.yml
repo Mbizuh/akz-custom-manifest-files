@@ -1,0 +1,31 @@
+avpiVersion: apps/v1
+kind: deployment
+metadata:
+  name: fronend-nginxapp
+  labels:
+    app: frontend-nginxapp
+    tier: frontend
+spec: 
+  replicas: 3
+  slectors:
+    matchlabels:
+      app: frontend-nginxapp
+  template:
+    metadata:
+      name: fronend-nginxapp
+      labels:
+        app: frontend-nginxapp
+        tier: frontend
+    spec:
+      container:
+       - name: fronend-nginxapp
+         image: stacksimplify/kube-helloworld:1.0.0
+         ports:
+          -containerPort: 80
+
+
+
+
+
+
+
